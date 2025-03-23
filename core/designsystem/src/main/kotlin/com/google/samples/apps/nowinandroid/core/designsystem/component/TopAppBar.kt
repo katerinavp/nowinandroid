@@ -34,6 +34,10 @@ import androidx.compose.ui.platform.testTag
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.tooling.preview.Preview
 import com.google.samples.apps.nowinandroid.core.designsystem.icon.NiaIcons
+import com.google.samples.apps.nowinandroid.core.designsystem.theme.Constants.NIA_TOP_APP_BAR
+import com.google.samples.apps.nowinandroid.core.designsystem.theme.Constants.NIA_TOP_APP_BAR_SEARCH
+import com.google.samples.apps.nowinandroid.core.designsystem.theme.Constants.NIA_TOP_APP_BAR_SETTINGS
+import com.google.samples.apps.nowinandroid.core.designsystem.theme.Constants.NIA_TOP_APP_BAR_TITLE
 import com.google.samples.apps.nowinandroid.core.designsystem.theme.NiaTheme
 
 @OptIn(ExperimentalMaterial3Api::class)
@@ -50,9 +54,9 @@ fun NiaTopAppBar(
     onActionClick: () -> Unit = {},
 ) {
     CenterAlignedTopAppBar(
-        title = { Text(text = stringResource(id = titleRes)) },
+        title = { Text(text = stringResource(id = titleRes),  modifier = Modifier.testTag(NIA_TOP_APP_BAR_TITLE)) },
         navigationIcon = {
-            IconButton(onClick = onNavigationClick) {
+            IconButton(onClick = onNavigationClick, modifier = Modifier.testTag(NIA_TOP_APP_BAR_SEARCH)) {
                 Icon(
                     imageVector = navigationIcon,
                     contentDescription = navigationIconContentDescription,
@@ -61,7 +65,7 @@ fun NiaTopAppBar(
             }
         },
         actions = {
-            IconButton(onClick = onActionClick) {
+            IconButton(onClick = onActionClick, modifier = Modifier.testTag(NIA_TOP_APP_BAR_SETTINGS)) {
                 Icon(
                     imageVector = actionIcon,
                     contentDescription = actionIconContentDescription,
@@ -70,7 +74,7 @@ fun NiaTopAppBar(
             }
         },
         colors = colors,
-        modifier = modifier.testTag("niaTopAppBar"),
+        modifier = modifier.testTag(NIA_TOP_APP_BAR),
     )
 }
 

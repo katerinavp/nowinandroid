@@ -451,7 +451,7 @@ private fun SearchToolbar(
         verticalAlignment = Alignment.CenterVertically,
         modifier = modifier.fillMaxWidth(),
     ) {
-        IconButton(onClick = { onBackClick() }) {
+        IconButton(onClick = { onBackClick() }, modifier = modifier.testTag("buttonBack")) {
             Icon(
                 imageVector = NiaIcons.ArrowBack,
                 contentDescription = stringResource(
