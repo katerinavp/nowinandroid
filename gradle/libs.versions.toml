@@ -2,7 +2,7 @@
 accompanist = "0.37.0"
 androidDesugarJdkLibs = "2.1.4"
 # AGP and tools should be updated together
-androidGradlePlugin = "8.9.0"
+androidGradlePlugin = "8.8.0"
 androidTools = "31.9.0"
 androidxActivity = "1.9.3"
 androidxAppCompat = "1.7.0"
@@ -116,6 +116,7 @@ coil-kt-svg = { group = "io.coil-kt", name = "coil-svg", version.ref = "coil" }
 firebase-analytics = { group = "com.google.firebase", name = "firebase-analytics" }
 firebase-bom = { group = "com.google.firebase", name = "firebase-bom", version.ref = "firebaseBom" }
 firebase-cloud-messaging = { group = "com.google.firebase", name = "firebase-messaging" }
+#compose= {module = "io.github.kakaocup:compose", version.ref = "compose"}
 firebase-crashlytics = { group = "com.google.firebase", name = "firebase-crashlytics" }
 firebase-performance = { group = "com.google.firebase", name = "firebase-perf" }
 google-oss-licenses = { group = "com.google.android.gms", name = "play-services-oss-licenses", version.ref = "googleOss" }
