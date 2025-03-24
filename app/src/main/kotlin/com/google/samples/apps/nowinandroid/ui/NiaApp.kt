@@ -67,6 +67,7 @@ import com.google.samples.apps.nowinandroid.core.designsystem.component.NiaGradi
 import com.google.samples.apps.nowinandroid.core.designsystem.component.NiaNavigationSuiteScaffold
 import com.google.samples.apps.nowinandroid.core.designsystem.component.NiaTopAppBar
 import com.google.samples.apps.nowinandroid.core.designsystem.icon.NiaIcons
+import com.google.samples.apps.nowinandroid.core.designsystem.theme.Constants.NIA_NAV_ITEM
 import com.google.samples.apps.nowinandroid.core.designsystem.theme.GradientColors
 import com.google.samples.apps.nowinandroid.core.designsystem.theme.LocalGradientColors
 import com.google.samples.apps.nowinandroid.feature.settings.SettingsDialog
@@ -168,7 +169,7 @@ internal fun NiaApp(
                     label = { Text(stringResource(destination.iconTextId)) },
                     modifier =
                     Modifier
-                        .testTag("NiaNavItem")
+                        .testTag(NIA_NAV_ITEM)
                         .then(if (hasUnread) Modifier.notificationDot() else Modifier),
                 )
             }

@@ -27,5 +27,7 @@ object Constants {
     const val SEARCH_TOOLBAR_BACK_BTN = "SearchToolbarBackBtn"
     const val SEARCH_TEXT_FIELD_TEXT_FIELD = "SearchTextFieldTextField"
     const val SEARCH_TEXT_FIELD_CLEAR_BTN = "SearchTextFieldClearBtn"
-
+    const val FOR_YOU_SCREEN_TITLE = "ForYouScreenTitle"
+    const val FOR_YOU_SCREEN_SUBTITLE = "ForYouScreenSubtitle"
+    const val FOR_YOU_SCREEN_DONE_BTN = "ForYouScreenDoneBtn"
 }

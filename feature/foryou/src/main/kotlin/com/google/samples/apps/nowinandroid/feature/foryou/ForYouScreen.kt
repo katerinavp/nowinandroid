@@ -94,6 +94,9 @@ import com.google.samples.apps.nowinandroid.core.designsystem.component.scrollba
 import com.google.samples.apps.nowinandroid.core.designsystem.component.scrollbar.rememberDraggableScroller
 import com.google.samples.apps.nowinandroid.core.designsystem.component.scrollbar.scrollbarState
 import com.google.samples.apps.nowinandroid.core.designsystem.icon.NiaIcons
+import com.google.samples.apps.nowinandroid.core.designsystem.theme.Constants.FOR_YOU_SCREEN_DONE_BTN
+import com.google.samples.apps.nowinandroid.core.designsystem.theme.Constants.FOR_YOU_SCREEN_SUBTITLE
+import com.google.samples.apps.nowinandroid.core.designsystem.theme.Constants.FOR_YOU_SCREEN_TITLE
 import com.google.samples.apps.nowinandroid.core.designsystem.theme.NiaTheme
 import com.google.samples.apps.nowinandroid.core.model.data.UserNewsResource
 import com.google.samples.apps.nowinandroid.core.ui.DevicePreviews
@@ -274,14 +277,16 @@ private fun LazyStaggeredGridScope.onboarding(
                         textAlign = TextAlign.Center,
                         modifier = Modifier
                             .fillMaxWidth()
-                            .padding(top = 24.dp),
+                            .padding(top = 24.dp)
+                            .testTag(FOR_YOU_SCREEN_TITLE),
                         style = MaterialTheme.typography.titleMedium,
                     )
                     Text(
                         text = stringResource(R.string.feature_foryou_onboarding_guidance_subtitle),
                         modifier = Modifier
                             .fillMaxWidth()
-                            .padding(top = 8.dp, start = 24.dp, end = 24.dp),
+                            .padding(top = 8.dp, start = 24.dp, end = 24.dp)
+                            .testTag(FOR_YOU_SCREEN_SUBTITLE),
                         textAlign = TextAlign.Center,
                         style = MaterialTheme.typography.bodyMedium,
                     )
@@ -301,6 +306,7 @@ private fun LazyStaggeredGridScope.onboarding(
                             modifier = Modifier
                                 .padding(horizontal = 24.dp)
                                 .widthIn(364.dp)
+                                .testTag(FOR_YOU_SCREEN_DONE_BTN)
                                 .fillMaxWidth(),
                         ) {
                             Text(

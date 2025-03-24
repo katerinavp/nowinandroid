@@ -17,10 +17,12 @@
 package com.google.samples.apps.nowinandroid.ui.homeworks.homework15
 
 import androidx.compose.ui.test.SemanticsNodeInteractionsProvider
-import com.google.samples.apps.nowinandroid.core.designsystem.theme.Constants
+import com.google.samples.apps.nowinandroid.core.designsystem.theme.Constants.FOR_YOU_SCREEN_SUBTITLE
+import com.google.samples.apps.nowinandroid.core.designsystem.theme.Constants.FOR_YOU_SCREEN_TITLE
 import com.google.samples.apps.nowinandroid.core.designsystem.theme.Constants.NIA_TOP_APP_BAR
 import com.google.samples.apps.nowinandroid.core.designsystem.theme.Constants.NIA_TOP_APP_BAR_SEARCH
 import com.google.samples.apps.nowinandroid.core.designsystem.theme.Constants.NIA_TOP_APP_BAR_SETTINGS
+import com.google.samples.apps.nowinandroid.core.designsystem.theme.Constants.NIA_TOP_APP_BAR_TITLE
 import com.kaspersky.components.composesupport.core.KNode
 import io.github.kakaocup.compose.node.element.ComposeScreen
 
@@ -28,10 +30,6 @@ class MainScreen(semanticProvides: SemanticsNodeInteractionsProvider) :
 
     ComposeScreen<MainScreen>(semanticProvides) {
 
-    val settingIcon: Any
-        get() {
-            TODO()
-        }
     val centerAlignedTopAppBar = KNode(semanticProvides) {
         hasTestTag(NIA_TOP_APP_BAR)
     }
@@ -39,29 +37,29 @@ class MainScreen(semanticProvides: SemanticsNodeInteractionsProvider) :
     val searchIcon = KNode(semanticProvides) {
         hasContentDescription("Search")
         hasParent(androidx.compose.ui.test.hasTestTag(NIA_TOP_APP_BAR_SEARCH))
-        useUnmergedTree = true
     }
 
     val titleText = KNode(semanticProvides){
-        hasTestTag(Constants.NIA_TOP_APP_BAR_TITLE)
-        useUnmergedTree = true
+        hasTestTag(NIA_TOP_APP_BAR_TITLE)
     }
 
     val settingsIcon = KNode(semanticProvides){
         hasContentDescription("Settings")
-        hasParent(androidx.compose.ui.test.hasTestTag(NIA_TOP_APP_BAR_SETTINGS))
-        useUnmergedTree = true
+        hasTestTag(NIA_TOP_APP_BAR_SETTINGS)
     }
 
     val doneButton = KNode(semanticProvides) {
         hasText("Done")
     }
 
-    val headlinesIcon = KNode(semanticProvides) {
-        hasContentDescription("Headlines")
+    val forYouScreenTitle = KNode(semanticProvides) {
+        hasTestTag(FOR_YOU_SCREEN_TITLE)
 
     }
+    val forYouScreenSubTitle = KNode(semanticProvides) {
+        hasTestTag(FOR_YOU_SCREEN_SUBTITLE)
 
+    }
     val uiIcon = KNode(semanticProvides) {
         hasContentDescription("UI")
 
